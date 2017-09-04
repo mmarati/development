@@ -1,0 +1,15 @@
+{
+  "name": "maruthi-user",
+  "version": "0.1.0",
+  "author": "maruthi",
+  "summary": "to create user",
+  "license": "n/a",
+  "source": "mmarati2017@gmail.com",
+  "project_page": "mmarati/github",
+  "issues_url": "to create user",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
