@@ -43,7 +43,6 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class user {
-class winuser {
 if $osfamily_windows {
 user {'maruthi':
 ensure => present,
@@ -68,7 +67,6 @@ managehome => true,
 password =>'$6$7.IwhG8ukBNUz/Yt$8yuzq1rxI1DcwdjvtA3/EuylvpGwYYNrnPwxbg2KXfv4.jJBj0HrefesVoy1blGa9mMW2oEcRGwc/FOwLKtDV.',
 #password_max_age => '9999'
 ##expiry => '2020-12-31',
-}
 }
 }
 }
