@@ -1,0 +1,15 @@
+{
+  "name": "scom-maruthi",
+  "version": "0.1.0",
+  "author": "maruthirao.marati",
+  "summary": "installing the scom.exe",
+  "license": "not required",
+  "source": "on mmarati2017@github.com",
+  "project_page": "just installing the scom.exe",
+  "issues_url": "contact mmarati2017@gmail.com",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
