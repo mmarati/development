@@ -42,7 +42,25 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class maruthi {
+class scom {
 
-
+file{ 'C:\\Temp\\AMD64':
+    source => 'puppet:///modules/scom/AMD64',
+    source_permissions => ignore,
+    ensure => 'directory',
+    recurse => 'true',
+   notify => Package['MOMAgent.msi'],
+   }
+package {'MOMAgent.msi':
+  name => 'MoMAgent.msi',
+  ensure => 'installed',
+  provider  => "windows",
+  source => 'C:\\Temp\\AMD64\\MOMAgent.msi',
+  install_options =>[ '/quiet','USE_MANUALLY_SPECIFIED_SETTINGS=0','AcceptEndUserLicenseAgreement=1','MANAGEMENT_GROUP=OMRLM2012','MANAGEMENT_SERVER_DNS=kwtotecoma01'],
+require => File['C:\\Temp\\AMD64\\MOMAgent.msi'],
 }
+ service {'HealthService':
+ ensure  => 'running',
+ require => Package['MOMAgent.msi'],
+    }
+    }
